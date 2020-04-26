@@ -1,3 +1,5 @@
+"Leader key
+let mapleader=" "
 " Syntax hightlight "
 syntax on
 
@@ -31,7 +33,6 @@ set ignorecase
 set smartcase
 
 "cursor highlighting
-set termguicolors
 set cursorline
 set cursorcolumn
 highlight CursorLine ctermbg=White cterm=bold guibg=#F8F8F8
@@ -46,28 +47,4 @@ autocmd BufWritePre * %s/\s\+$//e
 
 " Dictionary path, from which the words are being looked up.
 set dictionary=/usr/share/dict/words
-
-"Enable spellcheck
-map <leader>s :setlocal spell! spelllang=en_us<CR>
-
-"Shortcut split navigation
-map <C-h> <C-w>h
-map <C-j> <C-w>j
-map <C-k> <C-w>k
-map <C-l> <C-w>l
-
-"Autocompletion
-set wildmode=longest,list,full
-
-"Splitting
-set splitbelow splitright
-
-"Disable arrow keys navigation
-nnoremap <up> <nop>
-nnoremap <down> <nop>
-nnoremap <left> <nop>
-nnoremap <right> <nop>
-nnoremap j gj
-nnoremap k gk
-
 
