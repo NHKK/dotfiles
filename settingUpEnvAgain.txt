@@ -22,6 +22,8 @@ defaults write com.apple.Mail DisableReplyAnimations -bool true
 #Then run following command in terminal
 defaults write com.apple.dock autohide-time-modifier -int 0;killall Dock
 
+#Install Raycast
+https://www.raycast.com
 
 #Start by installing homebrew:
 #https://brew.sh
@@ -31,7 +33,11 @@ defaults write com.apple.dock autohide-time-modifier -int 0;killall Dock
 
 #Use homebrew and get the following
 #formula : (brew install {whatever you want here})
+brew install --cask hiddenbar
+brew install --cask iterm2
 brew install wget
 brew install ctags
+brew install ripgrep
+brew install fzf
+brew install neovim
 
-#update .zshrc with file in this repo do samething to .vimrc
