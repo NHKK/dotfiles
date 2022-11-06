@@ -42,8 +42,12 @@ keymap("n", "<leader>e", ":Fern . -right -reveal=% -drawer -toggle<cr>", opts)
 keymap("n", "<leader>p", "<Plug>(fern-action-preview:auto:toggle)", opts)
 --keymap("n", "<C-p>", "<Plug>(fern-action-preview:auto:toggle)", opts)
 
--- Tabby
+-- Tab
 keymap("n", "<C-t>", ":tabnew<CR>", opts)
 keymap("n", "<C-w>", ":tabclose<CR>", opts)
 keymap("n", "<Tab>", ":tabn<CR>", opts)
 keymap("n", "<S-Tab>", ":tabp<CR>", opts)
+
+-- Database
+--keymap("n", "<leader>du", ":DBUIToggle<CR>", opts)
+

@@ -96,6 +96,10 @@ return packer.startup(function(use)
     end
   }
 
+  -- Database
+  --use "dinhhuy258/vim-database"
+  use "ivalkeen/vim-simpledb"
+
   -- LSP Zero
   use {
     "VonHeikemen/lsp-zero.nvim",
