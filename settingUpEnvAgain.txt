@@ -41,3 +41,8 @@ brew install ripgrep
 brew install fzf
 brew install neovim
 
+#cat replacement need to also update .zshrc file
+brew install bat
+
+#display file icons in terminal
+brew install exa
