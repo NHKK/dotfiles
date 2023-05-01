@@ -34,7 +34,6 @@ https://www.raycast.com
 #Use homebrew and get the following
 #formula : (brew install {whatever you want here})
 brew install --cask hiddenbar
-brew install --cask iterm2
 brew install wget
 brew install ctags
 brew install ripgrep
