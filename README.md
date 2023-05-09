@@ -34,3 +34,8 @@ Repo: https://github.com/KenanBek/dbui
 Bat: https://github.com/sharkdp/bat
 Exa: https://the.exa.website/
 Ripgrep: https://github.com/BurntSushi/ripgrep
+Tig: https://jonas.github.io/tig/
+
+#Useful GUI tools Installable via homebrew
+Raycast
+hiddenbar
