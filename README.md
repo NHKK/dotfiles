@@ -31,13 +31,13 @@ brew install --cask font-jetbrains-mono
 Repo: https://github.com/KenanBek/dbui
 
 #Useful command-line tools
+Zap: https://www.zapzsh.org
 Bat: https://github.com/sharkdp/bat
 Exa: https://the.exa.website/
 Ripgrep: https://github.com/BurntSushi/ripgrep
 Tig: https://jonas.github.io/tig/
 
+
 #Useful GUI tools Installable via homebrew
 Raycast
 hiddenbar
-
-#add to test tig
