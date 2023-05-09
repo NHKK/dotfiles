@@ -39,3 +39,5 @@ Tig: https://jonas.github.io/tig/
 #Useful GUI tools Installable via homebrew
 Raycast
 hiddenbar
+
+#add to test tig
