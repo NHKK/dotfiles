@@ -27,7 +27,7 @@ brew tap homebrew/cask-fonts && brew install --cask font-hack-nerd-font
 
 #Create SSH key for github/gitlab
 ```
-mkdir ~/.ssh 
+mkdir ~/.ssh
 cd ~/.ssh
 touch config
 vi config
@@ -64,3 +64,6 @@ gitui: https://github.com/extrawurst/gitui
 #Useful GUI tools Installable via homebrew
 Raycast
 hiddenbar
+
+#Mac Terminal Themes
+https://github.com/lysyi3m/macos-terminal-themes/tree/master/themes
