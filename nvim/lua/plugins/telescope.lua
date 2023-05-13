@@ -1,21 +1,60 @@
-local M = {
-	"nvim-telescope/telescope.nvim",
-	dependencies = {
-		{ "nvim-lua/plenary.nvim", "nvim-tree/nvim-web-devicons" }
-	},
-	cmd = { "Telescope" },
+return {
+    'nvim-telescope/telescope.nvim',
+    dependencies = {
+        'nvim-lua/plenary.nvim',
+        {
+            'nvim-telescope/telescope-fzf-native.nvim',
+            build = 'make',
+        },
+        --'nvim-telescope/telescope-file-browser.nvim',
+        'debugloop/telescope-undo.nvim'
+    },
+    branch = '0.1.x',
+    cmd = 'Telescope',
+    keys = {
+      { "<leader>ff", "<cmd>:Telescope find_files<CR>", { "n" }, desc = "Telescope files"   },
+      { "<leader>fg", "<cmd>:Telescope live_grep<CR>" , { "n" }, desc = "Telescope grep"    },
+      { "<leader>fb", "<cmd>:Telescope buffers<CR>"   , { "n" }, desc = "Telescope buffers" },
+      { "<leader>fh", "<cmd>:Telescope help_tags<CR>" , { "n" }, desc = "Telescope help"    },
+      --{ "<leader>fb", "<cmd>:Telescope file_browser<CR>" , { "n" }, desc = "Telescope filebrowser"    },
+      { "<leader>fb", "<cmd>:Telescope buffers<CR>" , { "n" }, desc = "Telescope buffer"    },
+      { "<leader>fu", "<cmd>:Telescope undo<CR>" , { "n" }, desc = "Telescope undo"    },
+    },
+    opts = {
+        defaults = {
+            path_display = { 'smart' },
+            file_ignore_patterns = { '.git/' },
+        },
+        pickers = {
+            find_files = {
+                find_command = { 'rg', '--files', '--hidden', '--glob', '!**/.git/*' },
+            },
+        },
+        extensions = {
+            fzf = {
+                theme = 'jellybeans',
+                fuzzy = true,
+                override_generic_sorter = true,
+                override_file_sorter = true,
+                case_mode = 'smart_case',
+            },
+            --file_browser = {
+            --    theme = 'jellybeans',
+            --    hidden = true
+            --},
+            undo = {
+                side_by_side = true,
+                layout_strategy = 'vertical',
+                layout_config = {
+                    preview_height = 0.8
+                }
+            }
+        },
+    },
+    config = function()
+        -- Load the extensions
+        require('telescope').load_extension('fzf')
+        --require('telescope').load_extension('file_browser')
+        require('telescope').load_extension('undo')
+    end,
 }
-
-function M.config()
-	local telescope = require("telescope")
-	telescope.setup({})
-end
-
-M.keys = {
-	{ "<leader>ff", "<cmd>:Telescope find_files<CR>", { "n" }, desc = "Telescope files"   },
-	{ "<leader>fg", "<cmd>:Telescope live_grep<CR>" , { "n" }, desc = "Telescope grep"    },
-	{ "<leader>fb", "<cmd>:Telescope buffers<CR>"   , { "n" }, desc = "Telescope buffers" },
-	{ "<leader>fh", "<cmd>:Telescope help_tags<CR>" , { "n" }, desc = "Telescope help"    },
-}
-
-return M
