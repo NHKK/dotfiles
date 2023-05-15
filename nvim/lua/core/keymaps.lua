@@ -37,3 +37,11 @@ map("v", ">", ">gv", opts)
 -- Move text up/down while in visual block
 map("x", "J", ":move '>+1<CR>gv-gv", { noremap = true, silent = false })
 map("x", "K", ":move '<-2<CR>gv-gv", { noremap = true, silent = false })
+
+-- Buffer navigation
+map('n', '<S-h>', ':BufferLineCyclePrev<CR>', opts)
+map('n', '<S-l>', ':BufferLineCycleNext<CR>', opts)
+map('n', '[b', ':BufferLineCyclePrev<CR>', opts)
+map('n', ']b', ':BufferLineCycleNext<CR>', opts)
+map('n', '<Tab>', ':BufferLineCycleNext<CR>', opts)
+map('n', '<S-Tab>', ':BufferLineCyclePrev<CR>', opts)
