@@ -1,4 +1,4 @@
-#Disable ALL animations
+# Disable ALL animations
 ```
 defaults write -g NSAutomaticWindowAnimationsEnabled -bool false
 defaults write -g NSScrollAnimationEnabled -bool false
@@ -19,13 +19,13 @@ defaults write com.apple.Mail DisableSendAnimations -bool true
 defaults write com.apple.Mail DisableReplyAnimations -bool true
 ```
 
-#Font
+# Font
 Hack Nerd Font
 ```
 brew tap homebrew/cask-fonts && brew install --cask font-hack-nerd-font
 ```
 
-#Create SSH key for github/gitlab
+# Create SSH key for github/gitlab
 ```
 mkdir ~/.ssh
 cd ~/.ssh
@@ -50,10 +50,10 @@ ssh-add ~/.ssh/personal
 ssh -T git@github.com
 ```
 
-#DB_UI
+# DB_UI
 Repo: https://github.com/KenanBek/dbui
 
-#Useful command-line tools
+# Useful command-line tools
 Zap: https://www.zapzsh.org
 Bat: https://github.com/sharkdp/bat
 Exa: https://the.exa.website/
