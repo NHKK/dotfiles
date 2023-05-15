@@ -19,8 +19,8 @@ map("n", "<leader>q", ":q<CR>", opts)
 map("n", "<leader>w", ":w<CR>", opts)
 
 --Remap for dealing with word wrap
-map('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
-map('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
+map("n", "k", "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
+map("n", "j", "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
 
 -- Scrolling
 map("n", "<C-d>", "<C-d>zz", opts)
@@ -37,11 +37,3 @@ map("v", ">", ">gv", opts)
 -- Move text up/down while in visual block
 map("x", "J", ":move '>+1<CR>gv-gv", { noremap = true, silent = false })
 map("x", "K", ":move '<-2<CR>gv-gv", { noremap = true, silent = false })
-
--- Buffer navigation
-map('n', '<S-h>', ':BufferLineCyclePrev<CR>', opts)
-map('n', '<S-l>', ':BufferLineCycleNext<CR>', opts)
-map('n', '[b', ':BufferLineCyclePrev<CR>', opts)
-map('n', ']b', ':BufferLineCycleNext<CR>', opts)
-map('n', '<Tab>', ':BufferLineCycleNext<CR>', opts)
-map('n', '<S-Tab>', ':BufferLineCyclePrev<CR>', opts)
