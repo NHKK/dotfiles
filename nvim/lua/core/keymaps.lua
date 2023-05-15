@@ -1,31 +1,39 @@
--- leader key is <Space>, defined in init.lua
-local keymap = vim.keymap.set
+local opts = { noremap = true, silent = true }
+local map = vim.api.nvim_set_keymap
+-- Set space as my leader key
+map("", "<Space>", "<Nop>", opts)
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
 
-keymap("n", "q", "")
-keymap({ "n", "v" }, "<leader>d", "\"_d", { desc = "Delete without yank" })
+-- Better split navigation
+map("n", "<C-h>", "<C-w>h", opts)
+map("n", "<C-j>", "<C-w>j", opts)
+map("n", "<C-k>", "<C-w>k", opts)
+map("n", "<C-l>", "<C-w>l", opts)
+
+-- Quit neovim
+map("n", "<leader>Q", ":qa<CR>", opts)
+map("n", "<leader>q", ":q<CR>", opts)
+
+-- Quick write
+map("n", "<leader>w", ":w<CR>", opts)
+
+--Remap for dealing with word wrap
+map("n", "k", "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
+map("n", "j", "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
 
 -- Scrolling
-keymap("n", "<C-d>", "<C-d>zz")
-keymap("n", "<C-u>", "<C-u>zz")
-
-keymap("n", "<C-h>", "<C-w>h", { noremap = true, silent = false })
-keymap("n", "<C-k>", "<C-w>k", { noremap = true, silent = false })
-keymap("n", "<C-j>", "<C-w>j", { noremap = true, silent = false })
-keymap("n", "<C-l>", "<C-w>l", { noremap = true, silent = false })
+map("n", "<C-d>", "<C-d>zz", opts)
+map("n", "<C-u>", "<C-u>zz", opts)
 
 -- Split
-keymap("n", "sh", ":split<Return><C-w>w", { noremap = true, silent = false })
-keymap("n", "sv", ":vsplit<Return><C-w>w", { noremap = true, silent = false })
-
--- Move text up/down while in visual block
-keymap("x", "J", ":move '>+1<CR>gv-gv", { noremap = true, silent = false })
-keymap("x", "K", ":move '<-2<CR>gv-gv", { noremap = true, silent = false })
+map("n", "sh", ":split<Return><C-w>w", { noremap = true, silent = false })
+map("n", "sv", ":vsplit<Return><C-w>w", { noremap = true, silent = false })
 
 -- Indent while in visual mode
-keymap("v", "<", "<gv")
-keymap("v", ">", ">gv")
+map("v", "<", "<gv", opts)
+map("v", ">", ">gv", opts)
 
-keymap("v", "<leader>nr", "<Plug>RestNvim", { noremap = true, silent = false })
-
-keymap("n", "<Tab>", ":tabn<CR>", { noremap = true, silent = false })
-keymap("n", "<S-Tab>", ":tabp<CR>", { noremap = true, silent = false })
+-- Move text up/down while in visual block
+map("x", "J", ":move '>+1<CR>gv-gv", { noremap = true, silent = false })
+map("x", "K", ":move '<-2<CR>gv-gv", { noremap = true, silent = false })

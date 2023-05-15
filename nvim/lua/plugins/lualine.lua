@@ -1,42 +1,50 @@
 return {
-  'nvim-lualine/lualine.nvim', -- Fancier statusline
-  dependencies = { "catppuccin/nvim" },
-  event = "VeryLazy",
-  config = function()
-    require('lualine').setup {
-      options = {
-        icons_enabled = false,
-        theme = 'catppuccin',
-        component_separators = '|',
-        section_separators = '',
-      },
-      sections = {
-        lualine_a = { 'mode' },
-        lualine_b = { 'branch' },
-        lualine_c = { {
-          'filename',
-          file_status = true,
-          path = 0
-        } },
-        lualine_x = {
-          {
-            'diagnostics',
-            sources = { "nvim_diagnostic" },
-            symbols = {
-              error = ' ',
-              warn = ' ',
-              info = ' ',
-              hint = ' '
-            }
-          },
-          'encoding',
-          'filetype'
-        },
-        lualine_y = { 'progress' },
-        lualine_z = { 'location' }
-      },
-      tabline = {},
-      extensions = { 'fugitive' }
-    }
-  end
+	"nvim-lualine/lualine.nvim",
+	dependencies = "nvim-tree/nvim-web-devicons",
+	event = {
+		"BufReadPost",
+		"BufNewFile",
+	},
+	opts = {
+		options = {
+			-- theme = 'jellybeans',
+			component_separators = { left = "", right = "" },
+			section_separators = { left = "", right = "" },
+			disabled_filetypes = { "mason", "dashboard" },
+		},
+		sections = {
+			lualine_a = { "mode" },
+			lualine_b = {
+				"branch",
+				"diff",
+				{
+					"diagnostics",
+					sources = { "nvim_lsp", "nvim_diagnostic" },
+				},
+			},
+			lualine_c = {
+				"filename",
+				{
+					function()
+						return require("nvim-navic").get_location()
+					end,
+					cond = function()
+						return require("nvim-navic").is_available()
+					end,
+				},
+			},
+			lualine_x = {
+				"fileformat",
+				"filetype",
+			},
+			lualine_y = { "progress" },
+			lualine_z = { "location" },
+		},
+		extensions = {
+			"man",
+			"nvim-tree",
+			"toggleterm",
+			-- 'lazy'
+		},
+	},
 }

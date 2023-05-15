@@ -1,39 +1,21 @@
 return {
-   "nvim-treesitter/nvim-treesitter",
-    build = ":TSUpdate",
-    event = "BufEnter",
-    dependencies = {
-      "RRethy/nvim-treesitter-textsubjects",
-      "windwp/nvim-ts-autotag",
-      "nvim-treesitter/nvim-treesitter-context",
+    'nvim-treesitter/nvim-treesitter',
+    build = ':TSUpdate',
+    event = {
+        'BufReadPost',
+        'BufNewFile'
     },
-    config = function()
-      require("nvim-treesitter.configs").setup({
-      auto_install = true,
-      highlight = {
-        enable = true,
-      },
-      indent = {
-        enable = true,
-        disable = { "yaml" },
-      },
-      ensure_installed = {
-        "lua",
-      },
-      autotag = {
-        enable = true,
-      },
-      textsubjects = {
-        enable = true,
-        keymaps = {
-            ["."] = "textsubjects-smart",
-            [";"] = "textsubjects-container-outer",
-            ['i;'] = 'textsubjects-container-inner',
+    opts = {
+        ensure_installed = {
+            'lua',
         },
-      },
-    })
-    require"treesitter-context".setup{
-      enable = true,
-    }
-  end
+        ignore_install = { '' },
+        auto_install = true,
+        matchup = {
+            enabled = true
+        }
+    },
+    config = function(_, opts)
+        require('nvim-treesitter.configs').setup(opts)
+    end,
 }

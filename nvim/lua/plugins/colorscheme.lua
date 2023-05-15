@@ -1,16 +1,18 @@
 return {
+  --   {
+  --   "nanotech/jellybeans.vim",
+  --   name = "jellybeans",
+  --   lazy = false,
+  --   config = function()
+  --     vim.cmd.colorscheme = "jellybeans"
+  --   end,
+  -- },
   {
-    "catppuccin/nvim",
-    name = "catppuccin",
+    "nordtheme/vim",
+    name = "nord",
     lazy = false,
-    keys = {
-      { "<leader>cl", "<cmd>Telescope colorscheme enable_preview=true<cr>", desc = "Select Colorscheme with Preview" }
-    },
     config = function()
-      require("catppuccin").setup {
-        transparent_background = true,
-      }
-      vim.cmd.colorscheme "catppuccin"
-    end
+      vim.cmd.colorscheme = "nord"
+    end,
   },
 }

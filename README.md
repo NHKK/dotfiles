@@ -18,19 +18,52 @@ defaults write com.apple.finder DisableAllAnimations -bool true
 defaults write com.apple.Mail DisableSendAnimations -bool true
 defaults write com.apple.Mail DisableReplyAnimations -bool true
 ```
+
 #Font
-Jetbrains Mono
+Hack Nerd Font
 ```
-brew tap homebrew/cask-fonts
+brew tap homebrew/cask-fonts && brew install --cask font-hack-nerd-font
 ```
+
+#Create SSH key for github/gitlab
 ```
-brew install --cask font-jetbrains-mono
+mkdir ~/.ssh
+cd ~/.ssh
+touch config
+vi config
+
+#Personal github
+Host github github.com
+    HostName github.com
+    IdentityFile ~/.ssh/personal
+
+ssh-keygen -t ecdsa -C "example@gmail.com"
+
+#Type 'personal' for first question
+
+#Copy personal.pub file content
+pbcopy < ~/.ssh/personal.pub
+
+#Add ssh key on website
+
+ssh-add ~/.ssh/personal
+ssh -T git@github.com
 ```
 
 #DB_UI
 Repo: https://github.com/KenanBek/dbui
 
 #Useful command-line tools
+Zap: https://www.zapzsh.org
 Bat: https://github.com/sharkdp/bat
 Exa: https://the.exa.website/
 Ripgrep: https://github.com/BurntSushi/ripgrep
+gitui: https://github.com/extrawurst/gitui
+
+
+#Useful GUI tools Installable via homebrew
+Raycast
+hiddenbar
+
+#Mac Terminal Themes
+https://github.com/lysyi3m/macos-terminal-themes/tree/master/themes
