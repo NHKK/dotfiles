@@ -2,8 +2,8 @@ local opt = vim.opt
 local g = vim.g
 
 -- Cursor highlighting
-opt.cursorline = true
-opt.cursorcolumn = true
+opt.cursorline = false
+opt.cursorcolumn = false
 
 -- Pane splitting
 opt.splitright = true
@@ -19,10 +19,10 @@ opt.incsearch = true
 opt.autoindent = true
 
 -- Make terminal support truecolor
-opt.termguicolors = false
+--opt.termguicolors = false
 
 -- Make neovim use the system clipboard
-opt.clipboard = 'unnamedplus'
+opt.clipboard = "unnamedplus"
 
 -- Disable old vim status
 opt.showmode = false
@@ -44,7 +44,7 @@ opt.softtabstop = 2
 opt.foldenable = true
 opt.foldlevel = 99
 opt.foldlevelstart = 99
-opt.foldcolumn = '1'
+opt.foldcolumn = "1"
 
 -- Decrease update time
 opt.timeoutlen = 500
@@ -95,7 +95,7 @@ opt.breakindent = true
 opt.showbreak = string.rep(" ", 3)
 opt.linebreak = true
 opt.hlsearch = false
-opt.ruler = true
+opt.ruler = false
 opt.wildmenu = true
 opt.title = true
 opt.autoread = true

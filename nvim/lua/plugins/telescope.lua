@@ -29,7 +29,7 @@ return {
 		},
 		extensions = {
 			fzf = {
-				theme = "jellybeans",
+				-- theme = "jellybeans",
 				fuzzy = true,
 				override_generic_sorter = true,
 				override_file_sorter = true,
