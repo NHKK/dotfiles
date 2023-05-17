@@ -87,9 +87,6 @@ opt.laststatus = 2
 -- Confirm to save changed before exiting the modified buffer
 opt.confirm = true
 
--- Hide * markup for bold and italic
-opt.conceallevel = 3
-
 -- My Own options
 opt.breakindent = true
 opt.showbreak = string.rep(" ", 3)
