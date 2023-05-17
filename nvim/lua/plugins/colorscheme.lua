@@ -1,18 +1,11 @@
 return {
-  --   {
-  --   "nanotech/jellybeans.vim",
-  --   name = "jellybeans",
-  --   lazy = false,
-  --   config = function()
-  --     vim.cmd.colorscheme = "jellybeans"
-  --   end,
-  -- },
   {
-    "nordtheme/vim",
-    name = "nord",
+    "nanotech/jellybeans.vim",
+    name = "jellybeans",
     lazy = false,
+    enabled = false,
     config = function()
-      vim.cmd.colorscheme = "nord"
+      vim.cmd.colorscheme = "jellybeans"
     end,
   },
 }
