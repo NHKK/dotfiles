@@ -69,4 +69,4 @@ hiddenbar
 https://github.com/lysyi3m/macos-terminal-themes/tree/master/themes
 
 #test
-
+#test again
