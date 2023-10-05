@@ -59,6 +59,7 @@ Bat: https://github.com/sharkdp/bat
 Exa: https://the.exa.website/
 Ripgrep: https://github.com/BurntSushi/ripgrep
 Tig: https://github.com/jonas/tig
+Hurl: https://github.com/Orange-OpenSource/hurl
 
 
 #Useful GUI tools Installable via homebrew
