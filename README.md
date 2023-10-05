@@ -59,11 +59,12 @@ Bat: https://github.com/sharkdp/bat
 Exa: https://the.exa.website/
 Ripgrep: https://github.com/BurntSushi/ripgrep
 gitui: https://github.com/extrawurst/gitui
+tig: 
 
 
 #Useful GUI tools Installable via homebrew
 Raycast
-hiddenbar
+Hiddenbar
 
 #Mac Terminal Themes
 https://github.com/lysyi3m/macos-terminal-themes/tree/master/themes
