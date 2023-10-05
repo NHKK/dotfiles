@@ -58,8 +58,7 @@ Zap: https://www.zapzsh.org
 Bat: https://github.com/sharkdp/bat
 Exa: https://the.exa.website/
 Ripgrep: https://github.com/BurntSushi/ripgrep
-tig: 
-ugggh
+Tig: https://github.com/jonas/tig
 
 
 #Useful GUI tools Installable via homebrew
