@@ -56,7 +56,7 @@ Repo: https://github.com/KenanBek/dbui
 # Useful command-line tools
 Zap: https://www.zapzsh.org
 Bat: https://github.com/sharkdp/bat
-Exa: https://the.exa.website/
+Eza: https://github.com/eza-community/eza
 Ripgrep: https://github.com/BurntSushi/ripgrep
 Tig: https://github.com/jonas/tig
 Hurl: https://github.com/Orange-OpenSource/hurl
