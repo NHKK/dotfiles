@@ -69,5 +69,3 @@ Hiddenbar
 #Mac Terminal Themes
 https://github.com/lysyi3m/macos-terminal-themes/tree/master/themes
 
-#test
-
