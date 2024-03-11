@@ -58,9 +58,8 @@ Zap: https://www.zapzsh.org
 Bat: https://github.com/sharkdp/bat
 Eza: https://github.com/eza-community/eza
 Ripgrep: https://github.com/BurntSushi/ripgrep
-Tig: https://github.com/jonas/tig
+gitu: https://github.com/altsem/gitu?ref=console.dev
 Hurl: https://github.com/Orange-OpenSource/hurl
-
 
 #Useful GUI tools Installable via homebrew
 Raycast
@@ -68,5 +67,4 @@ Hiddenbar
 
 #Mac Terminal Themes
 https://github.com/lysyi3m/macos-terminal-themes/tree/master/themes
-
 
