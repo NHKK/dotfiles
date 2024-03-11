@@ -32,3 +32,5 @@ vim.keymap.set('n', 'sv', ':vsplit<Return><C-w>w')
 
 vim.cmd("set clipboard=unnamed")
 vim.cmd("set encoding=utf-8")
+vim.cmd("set mouse=")
+
