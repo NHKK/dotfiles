@@ -49,6 +49,9 @@ pbcopy < ~/.ssh/personal.pub
 ssh-add ~/.ssh/personal
 ssh -T git@github.com
 ```
+# Set Neovim as git editor
+git config --global core.editor "nvim"
+export GIT_EDITOR=nvim
 
 # DB_UI
 Repo: https://github.com/KenanBek/dbui
