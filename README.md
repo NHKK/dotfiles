@@ -57,11 +57,13 @@ export GIT_EDITOR=nvim
 Repo: https://github.com/KenanBek/dbui
 
 # Useful command-line tools
-Zap: https://www.zapzsh.org
+Sheldon: https://sheldon.cli.rs
 Bat: https://github.com/sharkdp/bat
+Bat-extra: https://github.com/eth-p/bat-extras
 Eza: https://github.com/eza-community/eza
 Ripgrep: https://github.com/BurntSushi/ripgrep
-gitu: https://github.com/altsem/gitu?ref=console.dev
+Gitu: https://github.com/altsem/gitu?ref=console.dev
+Harlequin: https://harlequin.sh/docs/adapters
 Hurl: https://github.com/Orange-OpenSource/hurl
 
 #Useful GUI tools Installable via homebrew

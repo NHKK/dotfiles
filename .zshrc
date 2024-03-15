@@ -1,32 +1,20 @@
-autoload -U colors && colors
-
-export PATH="/usr/local/bin:$PATH"
-
+path+=/opt/homebrew/bin
 alias c="clear"
-alias ..="cd .."
-alias ...="cd ../.."
-alias gbr="git branch --all"
-alias ctgr="ctags -R ."
+alias ch="history -p"
+alias cat='bat --paging=never'
+alias vi="nvim"
+alias gu="gitu"
+alias oldvim="vim"
+alias la='eza -lbhHigUmuSa@ --time-style=long-iso --git --color-scale'
+alias ls='eza --group-directories-first --git --icons'
+alias lt='eza --icons --color=auto --tree --level=2'
+alias harl="harlequin"
+alias zj="zellij"
 
-source <(antibody init)
-antibody bundle denysdovhan/spaceship-prompt
-antibody bundle zdharma/fast-syntax-highlighting
-antibody bundle zsh-users/zsh-autosuggestions
+. /opt/homebrew/opt/asdf/libexec/asdf.sh
+. "$HOME/.cargo/env"
+eval "$(sheldon source)"
 
-autoload -U colors && colors
+# Created by `pipx` on 2024-03-15 02:41:55
+export PATH="$PATH:/Users/cam/.local/bin"
 
-export PATH="/usr/local/bin:$PATH"
-
-alias c="clear"
-alias ..="cd .."
-alias ...="cd ../.."
-alias gbr="git branch --all"
-alias ctgr="ctags -R ."
-
-alias ls='exa -l --group-directories-first --color=auto --git --icons --no-permissions --no-user'
-alias ll='exa -lahF --group-directories-first --color=auto --git --icons'
-
-#PostgresSql Alias
-alias pg-start="pg_ctl -D /usr/local/var/postgres start"
-alias pg-stop="pg_ctl -D /usr/local/var/postgres stop"
-alias pg-restart="pg_ctl -D /usr/local/var/postgres restart"
