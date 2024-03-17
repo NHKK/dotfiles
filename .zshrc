@@ -3,6 +3,7 @@ alias c="clear"
 alias ch="history -p"
 alias cat='bat --paging=never'
 alias vi="nvim"
+alias gs="git status"
 alias gu="gitu"
 alias oldvim="vim"
 alias la='eza -lbhHigUmuSa@ --time-style=long-iso --git --color-scale'

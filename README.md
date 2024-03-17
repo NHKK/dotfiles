@@ -66,10 +66,19 @@ Gitu: https://github.com/altsem/gitu?ref=console.dev
 Harlequin: https://harlequin.sh/docs/adapters
 Hurl: https://github.com/Orange-OpenSource/hurl
 
-#Useful GUI tools Installable via homebrew
+# Useful GUI tools Installable via homebrew
 Raycast
 Hiddenbar
 
-#Mac Terminal Themes
+# Mac Terminal Themes
 https://github.com/lysyi3m/macos-terminal-themes/tree/master/themes
 
+# Setup Docker without Desktop
+https://how.wtf/how-to-use-docker-without-docker-desktop-on-macos.html
+
+```
+brew doctor
+brew update
+brew install colima
+brew install docker-credential-helper docker docker-compose
+```
